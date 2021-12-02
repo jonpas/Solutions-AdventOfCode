@@ -1,3 +1,3 @@
-# Repository/Project Name
+# Solutions-AdventOfCode
 
-Base project description...
+Solutions for [Advent of Code](https://adventofcode.com/).

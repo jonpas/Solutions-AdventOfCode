@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-with open("d1_input.txt", "r", encoding="utf-8") as f:
+with open("d1_input", "r", encoding="utf-8") as f:
     data = f.readlines()
     data = [int(line.strip()) for line in data]
 

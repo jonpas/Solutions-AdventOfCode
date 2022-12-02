@@ -11,7 +11,7 @@ def color_marked(x):
     return f"\033[1;31m{x}\033[0m" if x in marked_nums else f"{x}"
 
 
-with open("d4_input", "r", encoding="utf-8") as f:
+with open("d04_input", "r", encoding="utf-8") as f:
     draws = [int(num) for num in f.readline().strip().split(",")]
     print(f"{draws=}")
 

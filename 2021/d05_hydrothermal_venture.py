@@ -2,7 +2,7 @@
 
 import numpy as np
 
-with open("d5_input", "r", encoding="utf-8") as f:
+with open("d05_input", "r", encoding="utf-8") as f:
     data, max_x, max_y = [], 0, 0
     for line in f:
         split_line = line.strip().split(" -> ")

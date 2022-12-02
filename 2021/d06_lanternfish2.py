@@ -4,7 +4,7 @@ import numpy as np
 
 MAX_TIMER = 8
 
-with open("d6_input", "r", encoding="utf-8") as f:
+with open("d06_input", "r", encoding="utf-8") as f:
     data = f.readline().strip().split(",")
     data = [int(fish) for fish in data]
     # data = [3, 4, 3, 1, 2]  # test

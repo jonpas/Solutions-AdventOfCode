@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-with open("d3_input", "r", encoding="utf-8") as f:
+with open("d03_input", "r", encoding="utf-8") as f:
     data = f.readlines()
     data = [line.strip() for line in data]
 

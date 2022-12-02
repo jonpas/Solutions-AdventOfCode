@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-with open("d8_input", "r", encoding="utf-8") as f:
+with open("d08_input", "r", encoding="utf-8") as f:
     data = f.readlines()
     # data = ["acedgfb cdfbe gcdfa fbcad dab cefabd cdfgeb eafb cagedb ab | cdfeb fcadb cdfeb cdbaf"]  # test
 

@@ -2,7 +2,7 @@
 
 import numpy as np
 
-with open("d7_input", "r", encoding="utf-8") as f:
+with open("d07_input", "r", encoding="utf-8") as f:
     data = f.readline().strip().split(",")
     data = [int(crab) for crab in data]
     # data = [16, 1, 2, 0, 4, 2, 7, 1, 2, 14]  # test

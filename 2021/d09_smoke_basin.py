@@ -2,7 +2,7 @@
 
 import numpy as np
 
-data = np.genfromtxt("d9_input", dtype=int, delimiter=1)
+data = np.genfromtxt("d09_input", dtype=int, delimiter=1)
 
 print(data)
 

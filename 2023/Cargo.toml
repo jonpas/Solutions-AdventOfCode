@@ -7,4 +7,5 @@ edition = "2021"
 
 [dependencies]
 regex = "1.10.2"
+rstest = "0.18.2"
 watch = "0.2.3"

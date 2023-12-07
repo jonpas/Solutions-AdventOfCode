@@ -33,7 +33,7 @@ fn process(input: &str) -> String {
             let mut ways_to_beat = 0;
             let mut past_win_ways = false;
             for held in 0..*time {
-                let distance = held + held * (time - held - 1);
+                let distance = held * (time - held);
                 if distance > record {
                     past_win_ways = true;
                     ways_to_beat += 1;

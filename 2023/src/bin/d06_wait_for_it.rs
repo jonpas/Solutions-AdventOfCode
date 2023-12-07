@@ -27,14 +27,14 @@ fn process(input: &str) -> String {
 
     let product: u32 = times
         .iter()
-        .zip(records.iter())
+        .zip(records)
         .map(|(time, record)| {
             dbg!(time, record);
             let mut ways_to_beat = 0;
             let mut past_win_ways = false;
             for held in 0..*time {
                 let distance = held + held * (time - held - 1);
-                if distance > *record {
+                if distance > record {
                     past_win_ways = true;
                     ways_to_beat += 1;
                 } else if past_win_ways {

@@ -17,31 +17,26 @@ fn process(input: &str) -> String {
                 &_ => 0,
             };
 
-            dbg!(rot);
             dial += rot;
+            dbg!(rot, dial);
+            let mut wrap = 0;
 
-            dbg!(dial);
-            let mut zeros = 0;
-
-            //if dial > 99 {
-            //    dial -= (dial / 100) * 100;
-            //    zeros += dial / 100 + 1;
-            //    dbg!(dial / 100);
-            //} else if dial < 0 {
-            //    dial += (-dial / 100) * 100;
-            //    zeros += (-dial / 100) + 1;
-            //    dbg!(-dial / 100 + 1);
-            //}
-
-            if dial < 0 || dial > 99 {
-                dial -= (dial / 100) * 100;
-                zeros += (dial.abs() / 100) + 1;
+            if dial < 0 {
+                wrap = dial.abs() / 100 + 1;
+                if dial % 100 == 0 {
+                    wrap -= 1;
+                }
+                dial += 100 * wrap;
+            } else if dial > 99 {
+                wrap = dial / 100;
+                dial -= 100 * wrap;
             }
+            dbg!(dial, wrap);
 
-            zeros
+            wrap
         })
         .sum::<i32>();
-    output.to_string()
+    output.to_string() // should be 6738
 }
 
 #[cfg(test)]
@@ -61,5 +56,11 @@ L99
 R14
 L82";
         assert_eq!("6", process(input));
+    }
+
+    #[test]
+    fn test_1000() {
+        let input = "R1000";
+        assert_eq!("10", process(input));
     }
 }

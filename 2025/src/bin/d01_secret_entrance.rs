@@ -5,7 +5,7 @@ fn main() {
 }
 
 fn process(input: &str) -> String {
-    let mut dial = 50;
+    let mut dial: i32 = 50;
     let output = input
         .lines()
         .map(|line| {
@@ -17,15 +17,21 @@ fn process(input: &str) -> String {
                 &_ => 0,
             };
 
-            dbg!(rot);
             dial += rot;
+            dbg!(rot, dial);
+            let mut wrap = 0;
 
-            if dial > 99 {
-                dial -= (dial / 100) * 100;
-            } else if dial < 0 {
-                dial += (-dial / 100) * 100;
+            if dial < 0 {
+                wrap = dial.abs() / 100 + 1;
+                if dial % 100 == 0 {
+                    wrap -= 1;
+                }
+                dial += 100 * wrap;
+            } else if dial > 99 {
+                wrap = dial / 100;
+                dial -= 100 * wrap;
             }
-            dbg!(dial);
+            dbg!(dial, wrap);
 
             if dial == 0 {
                 1
